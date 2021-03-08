@@ -33,6 +33,7 @@ pipeline{
             steps {
                 echo "deploy application"
                 bat """
+                    whoami
                     move "%WORKSPACE%/". G:/Webhost/hello_django
                 """
             }
