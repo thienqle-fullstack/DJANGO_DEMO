@@ -33,7 +33,7 @@ pipeline{
                 echo "deploy application"
                 bat """
                     whoami
-                    xcopy * G:\\Webhost\\hello_django /s /i
+                    xcopy * G:\\Webhost\\hello_django
                     no
                 """
             }
