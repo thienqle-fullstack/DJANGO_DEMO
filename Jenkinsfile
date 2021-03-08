@@ -9,7 +9,7 @@ pipeline{
                  bat """
                     python -m venv env
                     cmd /c "env\\Scripts\\activate.bat"
-                    pip install -r requirement.txt
+                    python -m pip install -r requirement.txt
                     python manage.py collectstatic --noinput
                     cmd /c "env\\Scripts\\deactivate.bat"
                  """
