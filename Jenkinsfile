@@ -36,10 +36,11 @@ pipeline{
                     copy * G:\\Webhost\\hello_django
                     xcopy hello_project G:\\Webhost\\hello_django\\hello_project\\ 
                     xcopy static  G:\\Webhost\\hello_django\\static\\
-                    cmd /c "python -m venv G:\\Webhost\\hello_django\\env"
-                    cmd /c "G:\\Webhost\\hello_django\\env\\Scripts\\activate.bat"
-                    cmd /c "python G:\\Webhost\\hello_django\\manage.py collectstatic --noinput"
                 """
+                /*    cmd /c "python -m venv G:\\Webhost\\hello_django\\env"
+                    cmd /c "G:\\Webhost\\hello_django\\env\\Scripts\\activate.bat"
+                    cmd /c "python G:\\Webhost\\hello_django\\manage.py collectstatic --noinput" 
+               */
             }
         }
         
