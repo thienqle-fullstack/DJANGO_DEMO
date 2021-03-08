@@ -34,8 +34,8 @@ pipeline{
                 bat """
                     whoami
                     copy * G:\\Webhost\\hello_django
-                    xcopy hello_project G:\\Webhost\\hello_django\\hello_project\\ /y
-                    xcopy static  G:\\Webhost\\hello_django\\static\\ /y
+                    xcopy hello_project G:\\Webhost\\hello_django\\hello_project\\ /y /S /E
+                    xcopy static  G:\\Webhost\\hello_django\\static\\ /y /S /E
                 """
                 /*    cmd /c "python -m venv G:\\Webhost\\hello_django\\env"
                     cmd /c "G:\\Webhost\\hello_django\\env\\Scripts\\activate.bat"
