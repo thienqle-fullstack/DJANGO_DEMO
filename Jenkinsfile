@@ -19,10 +19,8 @@ pipeline{
             steps {
                  echo "test application"
                  bat """
-                    python -m venv env
                     cmd /c "env\\Scripts\\activate.bat"
-                    pip install -r requirement.txt
-                    python manage.py runserver
+                    python manage.py test
                  """
             }
         }
