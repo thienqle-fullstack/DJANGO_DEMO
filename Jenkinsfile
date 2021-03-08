@@ -33,7 +33,7 @@ pipeline{
                 echo "deploy application"
                 bat """
                     whoami
-                    copy . G:/Webhost/hello_django
+                    copy * G:\\Webhost\\hello_django
                 """
             }
         }
