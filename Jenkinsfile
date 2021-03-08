@@ -34,6 +34,7 @@ pipeline{
                 bat """
                     whoami
                     xcopy * G:\\Webhost\\hello_django /s /i
+                    no
                 """
             }
         }
