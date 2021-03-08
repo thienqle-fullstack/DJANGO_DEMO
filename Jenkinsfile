@@ -11,7 +11,6 @@ pipeline{
                     cmd /c "env\\Scripts\\activate.bat"
                     pip install -r requirement.txt
                     python manage.py collectstatic --noinput
-                    yes
                     cmd /c "env\\Scripts\\deactivate.bat"
                  """
             }
@@ -34,7 +33,7 @@ pipeline{
                 echo "deploy application"
                 bat """
                     whoami
-                    move "%WORKSPACE%/". G:/Webhost/hello_django
+                    move . G:/Webhost/hello_django
                 """
             }
         }
