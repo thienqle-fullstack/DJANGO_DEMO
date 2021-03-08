@@ -38,7 +38,7 @@ pipeline{
                     copy static  G:\\Webhost\\hello_django
                     cmd /c "python -m venv G:\\Webhost\\hello_django\\env"
                     cmd /c "G:\\Webhost\\hello_django\\env\\Scripts\\activate.bat"
-                    cmd /c "G:\\Webhost\\hello_django\\python manage.py collectstatic --noinput"
+                    cmd /c "python G:\\Webhost\\hello_django\\manage.py collectstatic --noinput"
                 """
             }
         }
