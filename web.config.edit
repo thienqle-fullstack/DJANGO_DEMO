@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.webServer>
+    <handlers>
+      <add name="Python FastCGI" 
+      path="*" 
+      verb="*" 
+      modules="FastCgiModule" 
+      scriptProcessor="g:\webhost\hello_django\venv\scripts\python.exe|g:\webhost\hello_django\venv\lib\site-packages\wfastcgi.py"
+      resourceType="Unspecified" 
+      requireAccess="Script" />
+    </handlers>
+  </system.webServer>
+
+  <appSettings>
+	<!-- PYTHON PATH TO YOUR PROJECT (parent folder which contains this web.config -->
+    <add key="PYTHONPATH" value="G:\Webhost\hello_django" />
+	
+	<!-- WSGI_HANDLER to your project wsgi.py file application  -->
+    <add key="WSGI_HANDLER" value="hello_project.wsgi.application" />
+	
+	<!-- DJANGO_SETTINGS_MODULE to your project settings.py  -->
+    <add key="DJANGO_SETTINGS_MODULE" value="hello_project.settings" />
+  </appSettings>
+</configuration>
