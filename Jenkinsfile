@@ -10,6 +10,7 @@ pipeline{
                     python -m venv env
                     cmd /c "env\\Scripts\\activate.bat"
                     pip install -r requirement.txt
+                    python manage.py collectstatic
                     cmd /c "env\\Scripts\\deactivate.bat"
                  """
             }
@@ -21,7 +22,18 @@ pipeline{
                  bat """
                     cmd /c "env\\Scripts\\activate.bat"
                     python manage.py test
+                    cmd /c "env\\Scripts\\deactivate.bat"
                  """
+            }
+        }
+        
+        stage('deploy'){
+         
+            steps {
+                echo "deploy application"
+                bat """
+                    move "%WORKSPACE%/" . G:/Webhost/hello_django
+                """
             }
         }
         
